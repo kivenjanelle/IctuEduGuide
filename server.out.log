@@ -1,0 +1,10 @@
+
+> ictu-eduguide@1.0.0 start
+> node server.js
+
+◇ injected env (6) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+✅ ICTU EduGuide running  →  http://localhost:5000
+   API health check       →  http://localhost:5000/api
+   Admin login            →  admin@ictuniversity.edu.cm / Admin@ICTU2026
+✅ Database connected successfully

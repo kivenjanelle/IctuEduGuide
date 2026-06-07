@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - ICTU EduGuide</title>
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #120d1f;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #1e1833;
+      padding: 40px;
+      border-radius: 20px;
+    }
+    h1 { color: #c9a84c; text-align: center; margin-bottom: 30px; }
+    .card {
+      background: #2a2344;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 15px;
+    }
+    button {
+      background: #6b1a49;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>👨‍💼 Admin Dashboard</h1>
+    <p style="text-align:center; color:#c9a84c;">Welcome, Administrator</p>
+
+    <div class="card">
+      <h2>Add New Course</h2>
+      <button onclick="alert('Course creation form will open here')">Create Course</button>
+    </div>
+
+    <div class="card">
+      <h2>Add Past Questions + Solutions</h2>
+      <button onclick="alert('Question form will open here')">Add Question</button>
+    </div>
+
+    <div class="card">
+      <h2>Create Quiz</h2>
+      <button onclick="alert('Quiz creation form will open here')">Create Quiz</button>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <button onclick="window.location.href='index.html'">← Logout</button>
+    </div>
+  </div>
+</body>
+</html>

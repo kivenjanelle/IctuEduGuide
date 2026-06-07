@@ -1,0 +1,11 @@
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+[2m11:53:37 PM[22m [33m[1m[vite][22m[39m [33mwarning: [33mDuplicate key "border" in object literal[33m
+152|                background: filterYear === year ? '#6366f1' : '#fff',
+153|                color: filterYear === year ? '#fff' : '#6b7280',
+154|                border: filterYear === year ? 'none' : '1px solid #e5e7eb',
+   |                ^
+155|                transition: 'all 0.2s'
+156|              }}>
+[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36mC:/Users/ADMIN/Downloads/App/App/src/components/CourseDetailPage.jsx[39m

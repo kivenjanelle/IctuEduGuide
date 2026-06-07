@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int           @id @default(autoincrement())
+  name        String
+  email       String        @unique
+  password    String
+  level       String?
+  speciality  String?
+  role        String        @default("student")
+  performances Performance[]
+  createdAt   DateTime      @default(now())
+}
+
+model Course {
+  id           Int           @id @default(autoincrement())
+  name         String
+  description  String?
+  topics       Topic[]
+  quizzes      Quiz[]
+  performances Performance[]
+  createdAt    DateTime      @default(now())
+}
+
+model Topic {
+  id        Int        @id @default(autoincrement())
+  title     String
+  content   String?
+  courseId  Int
+  course    Course     @relation(fields: [courseId], references: [id])
+  questions Question[]
+  createdAt DateTime   @default(now())
+}
+
+model Question {
+  id            Int      @id @default(autoincrement())
+  question      String
+  options       Json
+  correctAnswer String
+  topicId       Int?
+  topic         Topic?   @relation(fields: [topicId], references: [id])
+  quizId        Int?
+  quiz          Quiz?    @relation(fields: [quizId], references: [id])
+  createdAt     DateTime @default(now())
+}
+
+model Quiz {
+  id        Int        @id @default(autoincrement())
+  title     String
+  courseId  Int?
+  course    Course?    @relation(fields: [courseId], references: [id])
+  questions Question[]
+  createdAt DateTime   @default(now())
+}
+
+model Performance {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  courseId  Int
+  score     Float
+  user      User     @relation(fields: [userId], references: [id])
+  course    Course   @relation(fields: [courseId], references: [id])
+  createdAt DateTime @default(now())
+
+  @@unique([userId, courseId])
+}
