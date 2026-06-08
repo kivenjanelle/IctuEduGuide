@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../context/Authcontext.jsx';
 import { register } from '../utils/api';
 
 const LEVELS = ['Level 1', 'Level 2', 'Level 3'];
@@ -23,7 +23,7 @@ export default function RegisterPage() {
     try {
       const res = await register(form);
       loginUser(res.data.token, res.data.user);
-      navigate('/home');
+      navigate('/dashboard', { replace: true });
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed. Please try again.');
     } finally {
