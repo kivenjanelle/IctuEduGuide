@@ -8,7 +8,7 @@ import RegisterPage from './components/RegisterPage';
 import CoursesPage from './components/CoursesPage';
 import CourseDetailPage from './components/CourseDetailPage';
 import QuizPage from './components/QuizPage';
-import TakeQuizPage from './components/TakeQuizPage';
+import TakeQuizPage from './components/TakequizPage';
 import QuizResultPage from './components/QuizResultPage';
 import PerformancePage from './components/PerformancePage';
 import AdminPage from './components/AdminPage';
